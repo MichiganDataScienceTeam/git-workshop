@@ -60,8 +60,7 @@ class DataFrame:
         :param n: Number of rows to return.
         :return: A new DataFrame with the last n rows.
         """
-        # TODO: Person 2 - Implement this function
-
+        return DataFrame(self.data[-n:])
 
     def add_column(self, series: Series) -> None:
         """
