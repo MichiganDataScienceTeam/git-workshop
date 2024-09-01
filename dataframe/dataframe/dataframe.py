@@ -49,7 +49,8 @@ class DataFrame:
         :param n: Number of rows to return.
         :return: A new DataFrame with the first n rows.
         """
-        # TODO: Person 1 - Implement this function
+        new_data = [Series(series.data[:n], series.name) for series in self.data]
+        return DataFrame(new_data)
 
 
     def tail(self, n: int = 5) -> DataFrame:
