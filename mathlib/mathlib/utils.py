@@ -5,7 +5,13 @@ def validate_matrix(matrix):
     :return: True if valid, raises ValueError otherwise.
     """
     # TODO: Person 4 - Implement matrix validation logic
-    pass
+    dim2 = len(matrix[0])
+
+    for row in matrix:
+        if type(row) != list or len(row) != dim2:
+            raise ValueError('Invalid matrix')
+
+    return True
 
 def check_dimensions(matrix1, matrix2):
     """
@@ -15,7 +21,15 @@ def check_dimensions(matrix1, matrix2):
     :return: True if dimensions are compatible, raises ValueError otherwise.
     """
     # TODO: Person 4 - Implement dimension check logic
-    pass
+    m1d1 = len(matrix1)
+    m1d2 = len(matrix1[0])
+    m2d1 = len(matrix2)
+    m2d2 = len(matrix2[0])
+
+    if (m1d1 == m2d1 and m1d2 == m2d2) or (m1d1 == m2d2):
+        return True
+
+    raise ValueError('Invalid Dimensions')
 
 def identity_matrix(size):
     """
@@ -24,7 +38,14 @@ def identity_matrix(size):
     :return: Identity matrix as a 2D list.
     """
     # TODO: Person 4 - Implement identity matrix creation
-    pass
+    nrows = size[0]
+    ncols = size[1]
+
+    out = [[0] * ncols for _ in nrows]
+
+    for i in range(min(nrows, ncols)):
+        out[i][i] = 1
+    return out
 
 def zero_matrix(rows, cols):
     """
@@ -34,7 +55,9 @@ def zero_matrix(rows, cols):
     :return: Zero matrix as a 2D list.
     """
     # TODO: Person 4 - Implement zero matrix creation
-    pass
+    out = [[0] * cols for _ in rows]
+
+    return out
 
 def minor(matrix, row, col):
     """

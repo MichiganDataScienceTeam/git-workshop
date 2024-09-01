@@ -53,3 +53,5 @@ class Matrix:
     # TODO: Person 3 - Implement a function that concatenates two matrices vertically (vconcat)
 
     # TODO: Person 3 & 4 - Implement matrix eigenvalues and eigenvectors (eigen)
+    def eig(self, other):
+        return 
