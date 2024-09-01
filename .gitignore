@@ -1,1 +1,5 @@
 .DS_Store
+dataframe/env
+dataframe/dataframe/__pycache__
+dataframe/tests/__pycache__
+dataframe/DataFrame.egg-info
