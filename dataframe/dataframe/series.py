@@ -31,7 +31,7 @@ class Series:
 
     def min(self) -> float:
         """Return the minimum value in the series."""
-        # TODO: Person 3 - Implement this function
+        return min(self.data)
 
 
     def mean(self) -> float:

@@ -6,6 +6,12 @@ def test_series_sum():
     assert series1.sum() == 3
 
 
+
 # TODO: ALL - Implement tests for all other Series methods
 # Use the test_series_sum test as a reference
 # Reference pytest documentation as necessary: https://docs.pytest.org/en/stable/contents.html
+    
+    
+def test_series_min():
+    series1 = Series(data=[1, 2, 5, 0], name="B")
+    assert series1.sum() == 0
